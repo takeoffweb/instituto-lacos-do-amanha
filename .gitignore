@@ -1,0 +1,21 @@
+node_modules/
+dist/
+relatorios/
+.npm-cache/
+
+# Logs e arquivos temporarios
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Configuracoes locais de editor
+.vscode/
+.idea/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini

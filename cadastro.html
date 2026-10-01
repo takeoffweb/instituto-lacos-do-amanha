@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro | Instituto Laços do Amanhã</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" defer></script>
+        <script src="js/armazenamento.js" defer></script>
+        <script src="js/acessibilidade.js" defer></script>
+    </head>
+    <body>
+        <header class="cabecalho">
+            <a class="pular-conteudo" href="#conteudo">Ir para o conteúdo principal</a>
+            <div class="container cabecalho-conteudo">
+                <a class="identidade" href="index.html">
+                    <span class="identidade-simbolo" aria-hidden="true">L</span>
+                    <span>
+                        Instituto
+                        <strong>Laços do Amanhã</strong>
+                    </span>
+                </a>
+                <button class="botao botao-secundario" id="alternar-contraste" type="button" aria-pressed="false" hidden>Alto contraste</button>
+                <button class="botao-menu" type="button" aria-expanded="false" aria-controls="navegacao" aria-label="Abrir menu de navegação" hidden>
+                    <span aria-hidden="true">☰</span>
+                    Menu
+                </button>
+                <nav id="navegacao" aria-label="Navegação principal">
+                    <ul class="menu">
+                        <li>
+                            <a href="index.html">Início</a>
+                        </li>
+                        <li class="dropdown">
+                            <div class="dropdown-controles">
+                                <a href="projetos.html">Projetos</a>
+                                <button class="botao-submenu" type="button" aria-expanded="false" aria-controls="submenu-projetos" aria-label="Mostrar iniciativas" hidden>⌄</button>
+                            </div>
+                            <ul class="submenu" id="submenu-projetos">
+                                <li>
+                                    <a href="projetos.html#roda-de-leitura">Roda de Leitura</a>
+                                </li>
+                                <li>
+                                    <a href="projetos.html#mesa-compartilhada">Mesa Compartilhada</a>
+                                </li>
+                                <li>
+                                    <a href="projetos.html#comunidade-em-rede">Comunidade em Rede</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="cadastro.html" aria-current="page">Cadastro</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="conteudo" class="container" tabindex="-1">
+            <section class="cadastro">
+                <p class="sobretitulo">Faça parte desta rede</p>
+                <h1>Cadastro de participantes</h1>
+                <div class="acoes">
+                    <span class="badge">Voluntariado</span>
+                    <span class="badge">Apoio à comunidade</span>
+                    <button class="botao botao-secundario" id="abrir-modal" type="button" hidden>Como funciona a participação?</button>
+                </div>
+                <p>Todos os campos são obrigatórios.</p>
+                <p id="aviso" class="aviso">Demonstração acadêmica: use apenas dados fictícios. Com JavaScript ativo, o formulário apenas demonstra a validação, sem enviar ou salvar dados.</p>
+                <noscript>
+                    <p class="aviso">Sem JavaScript, o envio recarrega esta página e coloca os dados na URL. Use somente dados fictícios.</p>
+                </noscript>
+                <p id="alerta-formulario" class="alerta" role="alert"></p>
+                <form id="formulario-cadastro" action="cadastro.html" method="get" aria-describedby="aviso">
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+                        <div class="campos grade-12">
+                            <div class="campo">
+                                <label for="nome">Nome completo:</label>
+                                <input type="text" id="nome" name="nome" autocomplete="name" required>
+                            </div>
+                            <div class="campo">
+                                <label for="nascimento">Data de nascimento:</label>
+                                <input type="date" id="nascimento" name="nascimento" autocomplete="bday" required>
+                            </div>
+                            <div class="campo">
+                                <label for="cpf">CPF:</label>
+                                <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="123.456.789-00" aria-describedby="ajuda-cpf" required>
+                                <p class="ajuda" id="ajuda-cpf">Inclua pontos e hífen: 123.456.789-00. Apenas o formato é verificado.</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Contato</legend>
+                        <div class="campos grade-12">
+                            <div class="campo">
+                                <label for="email">E-mail:</label>
+                                <input type="email" id="email" name="email" autocomplete="email" required>
+                            </div>
+                            <div class="campo">
+                                <label for="telefone">Telefone:</label>
+                                <input type="tel" id="telefone" name="telefone" autocomplete="tel" pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(11) 99999-9999" aria-describedby="ajuda-telefone" required>
+                                <p class="ajuda" id="ajuda-telefone">Inclua parênteses, espaço e hífen: (11) 99999-9999.</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Endereço</legend>
+                        <div class="campos grade-12">
+                            <div class="campo">
+                                <label for="cep">CEP:</label>
+                                <input type="text" id="cep" name="cep" autocomplete="postal-code" pattern="\d{5}-\d{3}" placeholder="12345-678" aria-describedby="ajuda-cep" required>
+                                <p class="ajuda" id="ajuda-cep">Inclua o hífen: 12345-678.</p>
+                            </div>
+                            <div class="campo">
+                                <label for="endereco">Endereço (rua, número e bairro):</label>
+                                <input type="text" id="endereco" name="endereco" autocomplete="address-line1" required>
+                            </div>
+                            <div class="campo">
+                                <label for="cidade">Cidade:</label>
+                                <input type="text" id="cidade" name="cidade" autocomplete="address-level2" required>
+                            </div>
+                            <div class="campo">
+                                <label for="estado">Estado:</label>
+                                <input type="text" id="estado" name="estado" autocomplete="address-level1" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="acoes">
+                        <button class="botao" type="submit">Validar cadastro</button>
+                        <span class="ajuda">Nenhum dado será armazenado.</span>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <div class="toast" id="toast" hidden>
+            <p id="toast-mensagem" role="status"></p>
+            <button class="botao botao-secundario" id="fechar-toast" type="button" aria-label="Fechar mensagem de sucesso">Fechar</button>
+        </div>
+        <dialog id="modal-participacao" aria-labelledby="titulo-modal" aria-describedby="descricao-modal">
+            <h2 id="titulo-modal" tabindex="-1">Como funciona a participação?</h2>
+            <p id="descricao-modal">Você pode preencher o formulário para demonstrar interesse em voluntariado ou apoio à comunidade. Este projeto é uma simulação acadêmica: os dados não são enviados nem armazenados.</p>
+            <p>Use dados fictícios para experimentar a validação dos campos.</p>
+            <form method="dialog">
+                <button class="botao" autofocus>Entendi, fechar</button>
+            </form>
+        </dialog>
+        <footer class="rodape">
+            <p class="container">Instituto Laços do Amanhã — ONG fictícia. Projeto acadêmico de Desenvolvimento Front-End para Web.</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Início | Instituto Laços do Amanhã</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" defer></script>
+        <script src="js/armazenamento.js" defer></script>
+        <script src="js/acessibilidade.js" defer></script>
+    </head>
+    <body>
+        <header class="cabecalho">
+            <a class="pular-conteudo" href="#conteudo">Ir para o conteúdo principal</a>
+            <div class="container cabecalho-conteudo">
+                <a class="identidade" href="index.html">
+                    <span class="identidade-simbolo" aria-hidden="true">L</span>
+                    <span>
+                        Instituto
+                        <strong>Laços do Amanhã</strong>
+                    </span>
+                </a>
+                <button class="botao botao-secundario" id="alternar-contraste" type="button" aria-pressed="false" hidden>Alto contraste</button>
+                <button class="botao-menu" type="button" aria-expanded="false" aria-controls="navegacao" aria-label="Abrir menu de navegação" hidden>
+                    <span aria-hidden="true">☰</span>
+                    Menu
+                </button>
+                <nav id="navegacao" aria-label="Navegação principal">
+                    <ul class="menu">
+                        <li>
+                            <a href="index.html" aria-current="page">Início</a>
+                        </li>
+                        <li class="dropdown">
+                            <div class="dropdown-controles">
+                                <a href="projetos.html">Projetos</a>
+                                <button class="botao-submenu" type="button" aria-expanded="false" aria-controls="submenu-projetos" aria-label="Mostrar iniciativas" hidden>⌄</button>
+                            </div>
+                            <ul class="submenu" id="submenu-projetos">
+                                <li>
+                                    <a href="projetos.html#roda-de-leitura">Roda de Leitura</a>
+                                </li>
+                                <li>
+                                    <a href="projetos.html#mesa-compartilhada">Mesa Compartilhada</a>
+                                </li>
+                                <li>
+                                    <a href="projetos.html#comunidade-em-rede">Comunidade em Rede</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="cadastro.html">Cadastro</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="conteudo" class="container" tabindex="-1">
+            <section class="hero grade-12">
+                <div class="hero-texto">
+                    <p class="sobretitulo">Juntos, fazemos a diferença</p>
+                    <h1>Laços que transformam a comunidade</h1>
+                    <p>O Instituto Laços do Amanhã é uma ONG fictícia dedicada à inclusão social e ao fortalecimento de vínculos comunitários.</p>
+                    <p>Nossa missão é ampliar o acesso à educação, à alimentação e a oportunidades de desenvolvimento.</p>
+                    <p>Organizamos oficinas de leitura, apoio escolar e campanhas de arrecadação de alimentos com moradores e voluntários.</p>
+                    <p>Essas ações buscam fortalecer a autonomia das famílias, a aprendizagem das crianças e a rede de apoio da comunidade.</p>
+                    <p>
+                        <a class="botao" href="projetos.html">
+                            Conheça nossos projetos
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </p>
+                </div>
+                <picture class="hero-imagem">
+                    <source srcset="imagens/ong.webp" type="image/webp">
+                    <img width="1536" height="1024" src="imagens/ong.jpg" alt="Voluntários organizando alimentos para distribuir a famílias da comunidade">
+                </picture>
+            </section>
+            <section class="contato grade-12">
+                <div class="contato-texto">
+                    <p class="sobretitulo">Vamos conversar</p>
+                    <h2>Entre em contato</h2>
+                    <p>Dados fictícios para fins acadêmicos.</p>
+                </div>
+                <address class="contato-dados">
+                    <p>
+                        E-mail:
+                        <a href="mailto:contato@lacosdoamanha.example">contato@lacosdoamanha.example</a>
+                    </p>
+                    <p>
+                        Telefone:
+                        <a href="tel:+551100000000">(11) 0000-0000</a>
+                    </p>
+                    <p>Rua da Solidariedade, 120, Jardim Esperança, São Paulo — SP.</p>
+                </address>
+            </section>
+        </main>
+        <footer class="rodape">
+            <p class="container">Instituto Laços do Amanhã — ONG fictícia. Projeto acadêmico de Desenvolvimento Front-End para Web.</p>
+        </footer>
+    </body>
+</html>

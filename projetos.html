@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projetos | Instituto Laços do Amanhã</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" defer></script>
+        <script src="js/armazenamento.js" defer></script>
+        <script src="js/acessibilidade.js" defer></script>
+    </head>
+    <body>
+        <header class="cabecalho">
+            <a class="pular-conteudo" href="#conteudo">Ir para o conteúdo principal</a>
+            <div class="container cabecalho-conteudo">
+                <a class="identidade" href="index.html">
+                    <span class="identidade-simbolo" aria-hidden="true">L</span>
+                    <span>
+                        Instituto
+                        <strong>Laços do Amanhã</strong>
+                    </span>
+                </a>
+                <button class="botao botao-secundario" id="alternar-contraste" type="button" aria-pressed="false" hidden>Alto contraste</button>
+                <button class="botao-menu" type="button" aria-expanded="false" aria-controls="navegacao" aria-label="Abrir menu de navegação" hidden>
+                    <span aria-hidden="true">☰</span>
+                    Menu
+                </button>
+                <nav id="navegacao" aria-label="Navegação principal">
+                    <ul class="menu">
+                        <li>
+                            <a href="index.html">Início</a>
+                        </li>
+                        <li class="dropdown">
+                            <div class="dropdown-controles">
+                                <a href="projetos.html" aria-current="page">Projetos</a>
+                                <button class="botao-submenu" type="button" aria-expanded="false" aria-controls="submenu-projetos" aria-label="Mostrar iniciativas" hidden>⌄</button>
+                            </div>
+                            <ul class="submenu" id="submenu-projetos">
+                                <li>
+                                    <a href="projetos.html#roda-de-leitura">Roda de Leitura</a>
+                                </li>
+                                <li>
+                                    <a href="projetos.html#mesa-compartilhada">Mesa Compartilhada</a>
+                                </li>
+                                <li>
+                                    <a href="projetos.html#comunidade-em-rede">Comunidade em Rede</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="botao" href="cadastro.html">Cadastro</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="conteudo" class="container" tabindex="-1">
+            <section class="projetos grade-12">
+                <h1 class="titulo-pagina">Projetos e formas de participação</h1>
+                <article class="card card-participacao">
+                    <h2>Doações</h2>
+                    <p>Na proposta de funcionamento da ONG, contribuições financeiras por Pix ou transferência ajudam a comprar alimentos e materiais educativos. Após o cadastro, a equipe orientaria a pessoa interessada sobre como contribuir.</p>
+                    <p>Também são previstas doações de alimentos e livros, com entrega combinada com a equipe. Este site é uma simulação acadêmica e não recebe pagamentos.</p>
+                    <p>
+                        <a class="botao" href="cadastro.html">Quero contribuir</a>
+                    </p>
+                </article>
+                <article class="card card-participacao">
+                    <h2>Voluntariado</h2>
+                    <p>Voluntários podem apoiar oficinas de leitura, organizar doações e participar das atividades comunitárias. O cadastro demonstra interesse em uma conversa sobre disponibilidade e formas de participação.</p>
+                    <p>
+                        <a class="botao" href="cadastro.html">Quero ser voluntário</a>
+                    </p>
+                </article>
+                <article class="card card-iniciativas">
+                    <h2>Projetos e iniciativas sociais</h2>
+                    <section class="iniciativa" tabindex="-1" id="roda-de-leitura" aria-labelledby="titulo-roda-de-leitura">
+                        <span class="badge">Educação</span>
+                        <h3 id="titulo-roda-de-leitura">Roda de Leitura</h3>
+                        <p>Encontros semanais de leitura compartilhada e apoio escolar para crianças.</p>
+                    </section>
+                    <section class="iniciativa" tabindex="-1" id="mesa-compartilhada" aria-labelledby="titulo-mesa-compartilhada">
+                        <span class="badge">Alimentação</span>
+                        <h3 id="titulo-mesa-compartilhada">Mesa Compartilhada</h3>
+                        <p>Arrecadação e distribuição de alimentos para famílias acompanhadas pela equipe.</p>
+                    </section>
+                    <section class="iniciativa" tabindex="-1" id="comunidade-em-rede" aria-labelledby="titulo-comunidade-em-rede">
+                        <span class="badge">Comunidade</span>
+                        <h3 id="titulo-comunidade-em-rede">Comunidade em Rede</h3>
+                        <p>Oficinas e encontros entre moradores para compartilhar conhecimentos e fortalecer vínculos.</p>
+                    </section>
+                </article>
+            </section>
+        </main>
+        <footer class="rodape">
+            <p class="container">Instituto Laços do Amanhã — ONG fictícia. Projeto acadêmico de Desenvolvimento Front-End para Web.</p>
+        </footer>
+    </body>
+</html>
