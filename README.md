@@ -93,3 +93,7 @@ A preferência `lacos-do-amanha:alto-contraste` é local à origem. Ela não mig
 - O sandbox bloqueou o processo nativo do esbuild com `EPERM`; a build e o navegador de teste foram executados com a autorização de ambiente necessária.
 - A comparação de HTML foi ajustada para aceitar serializações semanticamente equivalentes de booleanos e viewport feitas pelo minificador.
 - A automação dos links internos usa teclado para não misturar a abertura por hover com o acionamento do botão do submenu. Nenhuma lógica da aplicação foi alterada para adaptar os testes.
+
+## Deploy
+
+A versão de produção está publicada na Vercel em: https://instituto-lacos-do-amanha.vercel.app/
